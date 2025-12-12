@@ -8,21 +8,30 @@
 }
 
 :root {
-  /* Primary */
   --White: hsl(0, 0%, 100%);
   --Black: hsl(0, 0%, 0%);
   --Grey200: hsl(0, 0%, 85%);
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 body {
   font-family: "Alata", sans-serif;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .parteArriba {
   background-image: url("./images/desktop/image-hero.jpg");
   padding: 60px 150px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .encabezado {
@@ -37,15 +46,22 @@ body {
   color: var(--White);
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  border-bottom: 2px solid var(--White);
+}
+
 h1 {
-  font-family: "Josefin Sans", sans-serif;
   font-size: 75px;
   color: var(--White);
   padding: 30px;
-  font-weight: 300;
   margin-bottom: 60px;
   width: 58%;
-  text-transform: uppercase;
   border: 3px solid var(--White);
 }
 
@@ -70,7 +86,7 @@ h1 {
   background-color: var(--White);
   padding: 95px 0 0 95px;
   margin-left: -160px;
-  max-width: 50%;
+  max-width: 55%;
 }
 
 .tioConGafasTexto p {
@@ -81,10 +97,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Josefin Sans", sans-serif;
   font-size: 55px;
-  font-weight: 300;
-  text-transform: uppercase;
 }
 
 .titulocuadrosImagenes {
@@ -104,6 +117,13 @@ button {
   text-transform: uppercase;
   border: 2px solid var(--Black);
   border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--Black);
+  color: var(--White);
 }
 
 .galeria {
@@ -120,17 +140,24 @@ button {
   align-items: flex-end;
   padding: 40px;
   position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.imagen:hover {
+  opacity: 0.6;
 }
 
 .imagen h3 {
-  font-family: "Josefin Sans", sans-serif;
   font-size: 32px;
-  font-weight: 300;
-  text-transform: uppercase;
   color: var(--White);
   z-index: 1;
   width: 150px;
   line-height: 1;
+}
+
+.imagen:hover h3 {
+  color: var(--Black);
 }
 
 .imagenDeepEarth {
@@ -169,9 +196,15 @@ footer {
   justify-content: space-between;
 }
 
-.redesSociales {
-  display: flex;
-  gap: 20px;
+.redesSociales img {
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.redesSociales img:hover {
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--White);
 }
 
 .parteAbajoFooter {
@@ -179,12 +212,160 @@ footer {
   justify-content: space-between;
 }
 
-.enlaces {
-  display: flex;
-  gap: 15px;
+.parteAbajoFooter p {
   color: var(--Grey200);
 }
 
-.parteAbajoFooter p {
-  color: var(--Grey200);
+.iconoHamburguesa {
+  display: none;
+}
+
+@media (max-width: 1160px) {
+  body {
+    text-align: center;
+  }
+
+  .encabezado {
+    margin-bottom: 50px;
+    align-items: center;
+  }
+
+  .enlaces {
+    display: none;
+  }
+
+  .iconoHamburguesa {
+    display: block;
+    cursor: pointer;
+    z-index: 200;
+  }
+
+  .parteArriba {
+    background-image: url("./images/mobile/image-hero.jpg");
+    padding: 40px 25px;
+  }
+
+  h1 {
+    font-size: 40px;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 20px;
+  }
+
+  .parteCentral {
+    padding: 100px 25px;
+  }
+
+  .tioConGafas {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+
+  .parteCentral img {
+    width: 100%;
+  }
+
+  .tioConGafasTexto {
+    margin-left: 0;
+    padding: 40px 25px 0;
+    max-width: 100%;
+    background-color: transparent;
+    background-color: var(--White);
+    margin-left: 0;
+    padding: 40px 0 0 0;
+  }
+
+  .tioConGafasTexto h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .tioConGafasTexto p {
+    margin-top: 15px;
+  }
+
+  .cuadrosImagenes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .titulocuadrosImagenes {
+    display: contents;
+  }
+
+  .cuadrosImagenes h2 {
+    order: 1;
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .galeria {
+    order: 2;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  .cuadrosImagenes button {
+    order: 3;
+    align-self: center;
+  }
+
+  .imagen {
+    height: 120px;
+  }
+
+  .imagen h3 {
+    width: auto;
+    font-size: 24px;
+  }
+
+  .imagenDeepEarth {
+    background-image: url("./images/mobile/image-deep-earth.jpg");
+  }
+  .imagenNightArcade {
+    background-image: url("./images/mobile/image-night-arcade.jpg");
+  }
+  .imagenSoccerTeamVR {
+    background-image: url("./images/mobile/image-soccer-team.jpg");
+  }
+  .imagenTheGrid {
+    background-image: url("./images/mobile/image-grid.jpg");
+  }
+  .imagenFromUpAboveVR {
+    background-image: url("./images/mobile/image-from-above.jpg");
+  }
+  .imagenPocketBorealis {
+    background-image: url("./images/mobile/image-pocket-borealis.jpg");
+  }
+  .imagenTheCuriosity {
+    background-image: url("./images/mobile/image-curiosity.jpg");
+  }
+  .imagenMakeItFisheye {
+    background-image: url("./images/mobile/image-fisheye.jpg");
+  }
+
+  footer {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .logosFooter {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .parteAbajoFooter {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .parteAbajoFooter .enlaces {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
