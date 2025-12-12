@@ -15,8 +15,9 @@
 }
 
 body {
-  font-family: "Atala", sans-serif;
+  font-family: "Alata", sans-serif;
   font-size: 15px;
+  font-weight: 300;
 }
 
 .parteArriba {
@@ -34,8 +35,6 @@ body {
   display: flex;
   gap: 15px;
   color: var(--White);
-  font-weight: 400;
-  font-family: "Josefin Sans", sans-serif;
 }
 
 h1 {
@@ -48,4 +47,68 @@ h1 {
   width: 58%;
   text-transform: uppercase;
   border: 3px solid var(--White);
+}
+
+.parteCentral {
+  display: flex;
+  flex-direction: column;
+  padding: 160px 150px;
+}
+
+.parteCentral img {
+  width: 65%;
+}
+
+.tioConGafas {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 100px;
+}
+
+.tioConGafasTexto {
+  position: relative;
+  background-color: var(--White);
+  padding: 95px 0 0 95px;
+  margin-left: -160px;
+  max-width: 50%;
+}
+
+.tioConGafasTexto p {
+  margin-top: 30px;
+  opacity: 0.5;
+  line-height: 1.5;
+  letter-spacing: 0.55px;
+}
+
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 55px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.titulocuadrosImagenes {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60px;
+}
+
+button {
+  padding: 10px 50px;
+  font-size: 20px;
+  background-color: var(--White);
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+  text-transform: uppercase;
+  border: 2px solid var(--Black);
+  border-radius: 4px;
+}
+
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 35px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
