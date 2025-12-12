@@ -106,9 +106,85 @@ button {
   border-radius: 4px;
 }
 
-h3 {
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.imagen {
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  position: relative;
+}
+
+.imagen h3 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 35px;
+  font-size: 32px;
   font-weight: 300;
   text-transform: uppercase;
+  color: var(--White);
+  z-index: 1;
+  width: 150px;
+  line-height: 1;
+}
+
+.imagenDeepEarth {
+  background-image: url("./images/desktop/image-deep-earth.jpg");
+}
+.imagenNightArcade {
+  background-image: url("./images/desktop/image-night-arcade.jpg");
+}
+.imagenSoccerTeamVR {
+  background-image: url("./images/desktop/image-soccer-team.jpg");
+}
+.imagenTheGrid {
+  background-image: url("./images/desktop/image-grid.jpg");
+}
+.imagenFromUpAboveVR {
+  background-image: url("./images/desktop/image-from-above.jpg");
+}
+.imagenPocketBorealis {
+  background-image: url("./images/desktop/image-pocket-borealis.jpg");
+}
+.imagenTheCuriosity {
+  background-image: url("./images/desktop/image-curiosity.jpg");
+}
+.imagenMakeItFisheye {
+  background-image: url("./images/desktop/image-fisheye.jpg");
+}
+
+footer {
+  padding: 50px 150px;
+  background-color: var(--Black);
+}
+
+.logosFooter {
+  display: flex;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+.redesSociales {
+  display: flex;
+  gap: 20px;
+}
+
+.parteAbajoFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.enlaces {
+  display: flex;
+  gap: 15px;
+  color: var(--Grey200);
+}
+
+.parteAbajoFooter p {
+  color: var(--Grey200);
 }
